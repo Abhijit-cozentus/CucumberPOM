@@ -2,6 +2,8 @@ package AppHooks;
 
 import java.util.Properties;
 
+
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -30,12 +32,12 @@ public class ApplicatopnHooks {
 	public void launchBrowser() {
 		String browserName=prop.getProperty("browser");
 		driverFactory = new DriverFactory();
-		driver =	driverFactory.init_driver(browserName);
+		driver =driverFactory.init_driver(browserName);
 
 	}
 
 	@After(order=0)
-	public void quitBrowser() {	
+	public void quitBrowser() {
 		driver.quit();
 	}
 
@@ -44,10 +46,15 @@ public class ApplicatopnHooks {
 		if(scenario.isFailed()) {
 			//take screenshot
 			String sceenshotName = scenario.getName().replaceAll(" ", "_");
-			byte [] scourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);		
+			byte [] scourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(scourcePath, "Image/png", sceenshotName);
+
 		}
 
 	}
 
+
 }
+
+
+

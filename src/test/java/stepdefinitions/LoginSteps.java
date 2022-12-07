@@ -30,7 +30,7 @@ public class LoginSteps {
 	@Then("page title should be {string}")
 	public void page_title_should_be(String expectedTitle) {
 		Assert.assertTrue(actualTitle.contains(expectedTitle));
-		//Assert.assertEquals(actualTitle, expectedTitle);
+	//	Assert.assertEquals(actualTitle, expectedTitle);
 
 	}
 
@@ -48,7 +48,7 @@ public class LoginSteps {
 	@Then("clicks on Sign in button")
 	public void clicks_on_sign_in_button() throws InterruptedException {
 		loginPage.clickLoginBtn();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 	}
 
 

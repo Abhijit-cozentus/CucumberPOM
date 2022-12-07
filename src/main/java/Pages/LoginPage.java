@@ -9,8 +9,8 @@ public class LoginPage {
 	private WebDriver driver ;
 
 	//Locators
-	private By username = By.xpath("//input[@data-placeholder='Username']");
-	private By password = By.xpath("//input[@data-placeholder='Password']");
+	private By username = By.xpath("//*[@id=\"mat-input-0\"]");
+	private By password = By.xpath("//*[@id=\"mat-input-1\"]");
 	private By loginBtn = By.xpath("//button[@type='submit']");
 
 	//Constructer of the page:
@@ -21,29 +21,31 @@ public class LoginPage {
 
 	//Page actions :features(behaviour) of the page the form of methods:
 	public String getPageTitle() {
-		return   driver.getTitle();	   
+		return   driver.getTitle();
 
 	}
 
 	public void enterUserName(String Username) {
-		driver.findElement(username).sendKeys(Username);   
+		driver.findElement(username).sendKeys(Username);
 
 	}
 	public void enterPassword(String pwd) {
-		driver.findElement(password).sendKeys(pwd);  
+		driver.findElement(password).sendKeys(pwd);
 	}
 
 	public void clickLoginBtn() {
 		driver.findElement(loginBtn).click();
 
+
 	}
 
- public void doLogin(String userid,String pwd) {
-	 driver.findElement(username).sendKeys(userid);
-	 driver.findElement(password).sendKeys(pwd);
-	 driver.findElement(loginBtn).click();
-	 
- }
+	public BookingListPage doLogin(String userid,String pwd) {
+		driver.findElement(username).sendKeys(userid);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(loginBtn).click();
+		return new BookingListPage(driver);
+
+	}
 
 
 }

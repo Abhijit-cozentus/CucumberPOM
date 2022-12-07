@@ -11,12 +11,12 @@
 
 	<name>CucumberPOM</name>
 	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<url>http://www.//ewlstaging.azurewebsites.net/unauth/login.com</url>
 
 	<properties>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.7</java.version>
 		<junit.version>4.13.1</junit.version>
 		<cucumber.version>7.8.0</cucumber.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
@@ -94,7 +94,25 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.paulhammant/ngwebdriver -->
+		<dependency>
+			<groupId>com.paulhammant</groupId>
+			<artifactId>ngwebdriver</artifactId>
+			<version>1.2</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1</version>
+		</dependency>
 
 
 	</dependencies>
