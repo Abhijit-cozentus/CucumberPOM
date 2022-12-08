@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="193.897">
-    <testcase classname="Add new boking page functionality validation" name="Create a new booking" time="42.984">
-        <system-out>
-            <![CDATA[Given User has already logged in to application.............................passed
-Given user is on booking list page..........................................passed
-When user gets title of the page............................................passed
-Then page title should be "EWL Connect Booking List"........................passed
-Then add new booking button is vissible on screen...........................passed
-Then user clicks on add new booking button..................................passed
-When user gets title of the page............................................passed
-Then page title should be "EWL Connect New Booking".........................passed
-Then enter customer name "ard" and customer name "aj".......................passed
-And click on confirm button.................................................passed
-When user gets title of the page............................................passed
-Then page title should be "EWL Connect Edit Booking"........................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Validate booking Details features" name="Validate Booking flow" time="98.694">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="149.421">
+    <testcase classname="Validate booking Details features" name="Validate Booking flow" time="105.735">
         <system-out>
             <![CDATA[Given User has already logged in to application.............................passed
 Given user is on booking list page..........................................passed
@@ -56,26 +39,29 @@ Then Convert the booking to Job.............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Validate booking list features" name="Validate Search Bar on Booking list page with valid data" time="28.814">
-        <system-out>
+    <testcase classname="Validate booking list features" name="Validate Search Bar on Booking list page with valid data" time="28.866">
+        <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">
             <![CDATA[Given User has already logged in to application.............................passed
 Given user is on booking list page..........................................passed
-Then user enters "PRE000608" booking id on search bar.......................passed
-Then validate Booking id "PRE000608"........................................passed
+Then user enters "PRE000608" booking id on search bar.......................failed
+Then validate Booking id "PRE000608"........................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinitions.BookingListSteps.user_enters_booking_id_on_search_bar(BookingListSteps.java:65)
+	at ✽.user enters "PRE000608" booking id on search bar(file:///E:/Selenium2.0/CucumberPOM/src/test/resources/Features/BookingList.feature:12)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
-    <testcase classname="To validate Login Page Feature" name="Login Page Title" time="6.357">
+    <testcase classname="To validate Login Page Feature" name="Login as a valid user" time="14.584">
         <system-out>
             <![CDATA[Given user is on the login page of EWL......................................passed
 When user gets title of the page............................................passed
 Then page title should be "EWL Connect Login"...............................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="To validate Login Page Feature" name="Login as a valid user" time="16.794">
-        <system-out>
-            <![CDATA[Given user is on the login page of EWL......................................passed
 Then user enters username "kavita.khandelwal@edgewl.com"....................passed
 And user enters password "1_b?!?hG".........................................passed
 And clicks on Sign in button................................................passed

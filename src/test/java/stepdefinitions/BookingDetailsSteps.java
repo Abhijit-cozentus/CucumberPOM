@@ -49,7 +49,7 @@ public class BookingDetailsSteps {
 	@Then("click on save")
 	public void click_on_save() throws InterruptedException {
 		bookingDetails.clickSave();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 	}
 
@@ -145,7 +145,8 @@ public class BookingDetailsSteps {
 
 	@Then("booking status should be {string}")
 	public void booking_status_should_be(String status) {
-		Assert.assertEquals(status,split[2]);	  
+		Assert.assertEquals(status,split[2]);	
+		
 	}
 	
 	@Then("Go to Search bar and search booking")
