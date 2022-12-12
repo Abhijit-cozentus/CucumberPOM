@@ -45,13 +45,19 @@ public class ApplicatopnHooks {
 	public void teardown(Scenario scenario) {
 		if(scenario.isFailed()) {
 			//take screenshot
-			String sceenshotName = scenario.getName().replaceAll(" ", "_");
-			byte [] scourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(scourcePath, "Image/png", sceenshotName);
+//			String sceenshotName = scenario.getName().replaceAll(" ", "_");
+//			byte [] scourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+//			scenario.attach(scourcePath, "Image/jpg", sceenshotName);
+			
+			TakesScreenshot ts = (TakesScreenshot)driver;
+			byte[]source = ts.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(source, "Image/jpg", "screenshot");
+			
 
 		}
 
 	}
+	
 
 
 }

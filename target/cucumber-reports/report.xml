@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="149.421">
-    <testcase classname="Validate booking Details features" name="Validate Booking flow" time="105.735">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="162.057">
+    <testcase classname="Validate booking Details features" name="Validate Booking flow" time="110.863">
         <system-out>
             <![CDATA[Given User has already logged in to application.............................passed
 Given user is on booking list page..........................................passed
@@ -39,25 +39,23 @@ Then Convert the booking to Job.............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Validate booking list features" name="Validate Search Bar on Booking list page with valid data" time="28.866">
-        <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">
+    <testcase classname="Validate booking list features" name="Validate Search Bar on Booking list page with valid data" time="33.281">
+        <failure message="expected:&lt;PRE000[]&gt; but was:&lt;PRE000[608]&gt;" type="org.junit.ComparisonFailure">
             <![CDATA[Given User has already logged in to application.............................passed
 Given user is on booking list page..........................................passed
-Then user enters "PRE000608" booking id on search bar.......................failed
-Then validate Booking id "PRE000608"........................................skipped
+Then user enters "PRE000608" booking id on search bar.......................passed
+Then validate Booking id "PRE000"...........................................failed
 
 StackTrace:
-java.lang.AssertionError: expected:<true> but was:<false>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
+org.junit.ComparisonFailure: expected:<PRE000[]> but was:<PRE000[608]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepdefinitions.BookingListSteps.user_enters_booking_id_on_search_bar(BookingListSteps.java:65)
-	at ✽.user enters "PRE000608" booking id on search bar(file:///E:/Selenium2.0/CucumberPOM/src/test/resources/Features/BookingList.feature:12)
+	at stepdefinitions.BookingListSteps.validate_booking_id(BookingListSteps.java:71)
+	at ✽.validate Booking id "PRE000"(file:///E:/Selenium2.0/CucumberPOM/src/test/resources/Features/BookingList.feature:13)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="To validate Login Page Feature" name="Login as a valid user" time="14.584">
+    <testcase classname="To validate Login Page Feature" name="Login as a valid user" time="17.61">
         <system-out>
             <![CDATA[Given user is on the login page of EWL......................................passed
 When user gets title of the page............................................passed

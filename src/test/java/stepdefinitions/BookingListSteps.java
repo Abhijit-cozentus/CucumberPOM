@@ -62,7 +62,6 @@ public class BookingListSteps {
 	public void user_enters_booking_id_on_search_bar(String Id) throws InterruptedException {
 		bookingListPage.enterSearchvalue(Id);
 		Thread.sleep(5000);
-		Assert.assertEquals(true, false);
 	}
 
 

@@ -10,4 +10,4 @@ Feature: Validate booking list features
     Scenario: Validate Search Bar on Booking list page with valid data
     Given user is on booking list page
     Then user enters "PRE000608" booking id on search bar
-    Then validate Booking id "PRE000608"
+    Then validate Booking id "PRE000"
